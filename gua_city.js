@@ -323,7 +323,7 @@ function readShareCode() {
         } else {
           if (data) {
           	console.log(data);
-          	data=['GYzkyuWiRwKkEd7WW5gzmkLsqQPakM-n1e7RNL1n1VA'];
+          	data=["GYzkyuWiRwKkEd7WW5gzmkLsqQPakM-n1e7RNL1n1VA"];
             data = JSON.parse(data);
           }
         }
