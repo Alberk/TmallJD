@@ -256,7 +256,8 @@ function readShareCode() {
           console.log(`${$.name} API请求失败，请检查网路重试`)
         } else {
           if (data) {
-            data=['GYzkyuWiRwKkEd7WW5gzmkLsqQPakM-n1e7RNL1n1VA'];
+            console.log(data);
+            data = "{\"code\":200,\"data\":[\"GYzkyuWiRwKkEd7WW5gzmkLsqQPakM-n1e7RNL1n1VA\"]}";
             data = JSON.parse(data);
           }
         }
