@@ -322,6 +322,7 @@ function readShareCode() {
           console.log(`助力池 API请求失败，请检查网路重试`)
         } else {
           if (data) {
+          	console.log(data);
           	data=['GYzkyuWiRwKkEd7WW5gzmkLsqQPakM-n1e7RNL1n1VA'];
             data = JSON.parse(data);
           }
