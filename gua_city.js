@@ -26,7 +26,7 @@ if ($.isNode()) {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
-let inviteCodes = []
+let inviteCodes = ['GYzkyuWiRwKkEd7WW5gzmkLsqQPakM-n1e7RNL1n1VA']
 $.shareCodesArr = [];
 
 !(async () => {
@@ -315,21 +315,21 @@ function city_lotteryAward() {
 function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
-    $.get({url: `https://jd.smiek.tk/city`, 'timeout': 10000}, (err, resp, data) => {
+    $.get({url: `https://jd.smiek.tk/city`, 'timeout': 5000}, (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
           console.log(`助力池 API请求失败，请检查网路重试`)
         } else {
           if (data) {
-          	//data = [""];
+          	data=['GYzkyuWiRwKkEd7WW5gzmkLsqQPakM-n1e7RNL1n1VA'];
             data = JSON.parse(data);
           }
         }
       } catch (e) {
         $.logErr(e, resp)
       } finally {
-        resolve(null);
+        resolve(data);
       }
     })
     await $.wait(10000);
