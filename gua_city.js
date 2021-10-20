@@ -322,7 +322,7 @@ function readShareCode() {
           console.log(`助力池 API请求失败，请检查网路重试`)
         } else {
           if (data) {
-          	data = [""];
+          	//data = [""];
             data = JSON.parse(data);
           }
         }
