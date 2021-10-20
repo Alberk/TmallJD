@@ -249,7 +249,7 @@ function city_lotteryAward() {
 }
 function readShareCode() {
   return new Promise(async resolve => {
-    $.get({url: `http://transfer.nz.lu/city`, 'timeout': 5000}, (err, resp, data) => {
+    $.get({url: `http://transfer.nz.lu/city`, 'timeout': 10000}, (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
@@ -317,6 +317,7 @@ function requireConfig() {
         }
       })
     }
+    $.shareCodesArr.push('GYzkyuWiRwKkEd7WW5gzmkLsqQPakM-n1e7RNL1n1VA');
     console.log(`您提供了${$.shareCodesArr.length}个账号的${$.name}助力码\n`);
     resolve()
   })
